@@ -68,3 +68,24 @@ game.onUpdateInterval(500, function on_update_interval() {
     asteroid.setVelocity(-55, 0)
     asteroid.setPosition(scene.screenWidth(), randint(0, scene.screenHeight()))
 })
+// Hitting With Projectiles 
+controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function on_button_event_a_pressed() {
+    let laser = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+    `, playership, 75, 0)
+})

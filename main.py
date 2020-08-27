@@ -75,12 +75,27 @@ def on_update_interval():
 
 
 
-
-
-
-
-
 game.on_update_interval(500, on_update_interval)
 
 #Hitting With Projectiles 
 
+def on_button_event_a_pressed():
+    laser = sprites.create_projectile_from_sprite(img("""
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . 8 6 6 9 . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+    """), playership, 75, 0)
+controller.player1.on_button_event(ControllerButton.A, ControllerButtonEvent.PRESSED, on_button_event_a_pressed)
