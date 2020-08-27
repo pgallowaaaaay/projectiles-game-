@@ -28,3 +28,59 @@ playership.set_flag(SpriteFlag.StayInScreen, True)
 controller.move_sprite(playership, 140, 140)
 
 #Enemies
+asteroid = sprites.create(img("""
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . c c . . . . .
+    . . . . . . . . c c . c c c . .
+    . . . . . . . c c b c b c c c .
+    . . . . . . c c c c c c b c c .
+    . . . c c c c c b c c b . c . .
+    . . c . b b c c c c c c c c . .
+    . . c b c c c c c c . b c . . .
+    . . c c c c c . b c c c . . . .
+    . . . c c c . c . . . . . . . .
+    . . . . c c c . . . . . . . . .
+    . . . . . c . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+"""))
+asteroid.set_velocity(-55, 0)
+asteroid.set_position(scene.screen_width(), randint(0, scene.screen_height()))
+
+def on_update_interval():
+    asteroid = sprites.create(img("""
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . c c . . . . .
+    . . . . . . . . c c . c c c . .
+    . . . . . . c c c b c b c c c .
+    . . . . . c . c c c c c b c c .
+    . . . c c . c c b c c b . c . .
+    . . c . b b c c c c c c c c . .
+    . . c b c c c c c c . b c . . .
+    . . c c c c c . b c c c . . . .
+    . . . c c c . c . . . . . . . .
+    . . . . c c c . . . . . . . . .
+    . . . . . c . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    """))
+    asteroid.set_velocity(-55, 0)
+    asteroid.set_position(scene.screen_width(), randint(0, scene.screen_height()))
+
+
+
+
+
+
+
+
+
+
+game.on_update_interval(500, on_update_interval)
+
+#Hitting With Projectiles 
+
